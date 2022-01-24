@@ -36,8 +36,8 @@ export default {
 
 <style scoped>
 .app-header {
-  position: absolute;
-  line-height: 50px;
+  /*position: absolute;*/
+  line-height: 60px;
   top: 0px;
   left: 0px;
   right: 0px;
