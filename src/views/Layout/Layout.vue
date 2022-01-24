@@ -4,7 +4,7 @@
       <el-header class="header">
         <vheader></vheader>
       </el-header>
-      <el-container>
+      <el-container id="main-wrapper">
         <side></side>
         <el-main>
           <!--        <router-view></router-view>-->
@@ -31,5 +31,16 @@ export default {
 </script>
 
 <style scoped>
-
+.el-header {
+  padding: 0px;
+  min-height: 50px;
+}
+.el-main{
+  height:760px;
+  padding:0px;
+}
+#main-wrapper{
+  padding:0;
+  height:800px;
+}
 </style>

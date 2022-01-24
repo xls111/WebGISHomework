@@ -40,7 +40,7 @@
 <script>
 
 export default {
-  name: "Table",
+  name: "EducationTable",
   data() {
     return {
       pageIndex: 1,
@@ -59,16 +59,15 @@ export default {
         },
       },
       columns: [
-        {field: 'id', key: 'a', title: '编号', width: 10, titleAlign: 'center', columnAlign: 'center', isResize: true},
-        {field: 'code', key: 'b', title: '地标编号', width: 30, titleAlign: 'center', columnAlign: 'center', isResize: true},
-        {field: 'name', key: 'c', title: '地表名', width: 30, titleAlign: 'center', columnAlign: 'center', isResize: true},
-        {field: 'lng', key: 'd', title: '经度', width: 30, titleAlign: 'center', columnAlign: 'left', isResize: true},
-        {field: 'lat', key: 'e', title: '纬度', width: 30, titleAlign: 'center', columnAlign: 'left', isResize: true},
-        {field: 'adname', key: 'f', title: '地址', width: 30, titleAlign: 'center', columnAlign: 'left', isResize: true},
-        {field: 'adcode', key: 'g', title: '地址代码', width: 30, titleAlign: 'center', columnAlign: 'left', isResize: true}
+        {field: 'fid', key: 'a', title: '编号',titleAlign: 'center', columnAlign: 'center', isResize: true},
+        {field: 'name', key: 'b', title: '教育机构名',  titleAlign: 'center', columnAlign: 'center', isResize: true},
+        {field: 'address', key: 'c', title: '地址', titleAlign: 'center', columnAlign: 'center', isResize: true},
+        // {field: 'lng', key: 'd', title: '经度', width: 30, titleAlign: 'center', columnAlign: 'left', isResize: true},
+        // {field: 'lat', key: 'e', title: '纬度', width: 30, titleAlign: 'center', columnAlign: 'left', isResize: true},
+        {field: 'telephone', key: 'f', title: '电话',  titleAlign: 'center', columnAlign: 'left', isResize: true},
       ],
       columns2:[
-        {field: 'id', key: 'a', title: '编号', width: 10, titleAlign: 'center', columnAlign: 'center', isResize: true},
+        {field: 'fid', key: 'a', title: '编号', width: 10, titleAlign: 'center', columnAlign: 'center', isResize: true},
         {
           field: "",
           key: "checkbox",
@@ -78,12 +77,10 @@ export default {
           width: 50,
           align: "center",
         },
-        {field: 'code', key: 'b', title: '地标编号', width: 30, titleAlign: 'center', columnAlign: 'center', isResize: true},
-        {field: 'name', key: 'c', title: '地表名', width: 30, titleAlign: 'center', columnAlign: 'center', isResize: true},
-        {field: 'lng', key: 'd', title: '经度', width: 30, titleAlign: 'center', columnAlign: 'left', isResize: true},
-        {field: 'lat', key: 'e', title: '纬度', width: 30, titleAlign: 'center', columnAlign: 'left', isResize: true},
-        {field: 'adname', key: 'f', title: '地址', width: 30, titleAlign: 'center', columnAlign: 'left', isResize: true},
-        {field: 'adcode', key: 'g', title: '地址代码', width: 30, titleAlign: 'center', columnAlign: 'left', isResize: true}
+        {field: 'name', key: 'b', title: '教育机构名',  titleAlign: 'center', columnAlign: 'center', isResize: true},
+        {field: 'address', key: 'c', title: '地址', titleAlign: 'center', columnAlign: 'center', isResize: true},
+        {field: 'telephone', key: 'f', title: '电话',  titleAlign: 'center', columnAlign: 'left', isResize: true},
+
       ],
       isSelectedKey: true
     }
@@ -176,7 +173,7 @@ export default {
 
     // Simulation table data
     initDatabase() {
-      this.$axios.get('do/Site/SiteAll').then(res => {
+      this.$axios.get('do/SurroundSite/Education/EducationAll').then(res => {
         this.DB_DATA = res.data
         //console.log(res.data);
         //console.log("DB_DATA:\n" + DB_DATA);

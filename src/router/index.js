@@ -43,7 +43,37 @@ export default new Router({
         {
           path: '/siteTable',
           name: 'siteTable',
-          component: () => import('../components/Table')
+          component: () => import('../components/Tables/SitesTable')
+        },
+        {
+          path:'/restaurantTable',
+          name:'restaurantTable',
+          component: () => import('../components/Tables/RestaurantTable')
+        },
+        {
+          path:'/accommodationTable',
+          name:'restaurantTable',
+          component: () => import('../components/Tables/AccommodationTable')
+        },
+        {
+          path:'/educationTable',
+          name:'restaurantTable',
+          component: () => import('../components/Tables/EducationTable')
+        },
+        {
+          path:'/entertainTable',
+          name:'restaurantTable',
+          component: () => import('../components/Tables/EntertainTable')
+        },
+        {
+          path:'/financeTable',
+          name:'restaurantTable',
+          component: () => import('../components/Tables/FinanceTable')
+        },
+        {
+          path:'/marketTable',
+          name:'restaurantTable',
+          component: () => import('../components/Tables/MarketTable')
         }
       ]
     },
