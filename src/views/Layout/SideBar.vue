@@ -81,10 +81,10 @@
                   <i class="el-icon-s-tools"></i>
                   <span slot="title">信息管理</span>
                 </template>
-                <router-link to="basemap" key="basemap">
-                  <el-menu-item index="/basemap">
+                <router-link to="siteTable" key="siteTable">
+                  <el-menu-item index="/siteTable">
                     <i class="el-icon-s-tools"></i>
-                    <span slot="title">功能一</span>
+                    <span slot="title">地标表格</span>
                   </el-menu-item>
                 </router-link>
                 <router-link to="drawmap" key="drawmap">

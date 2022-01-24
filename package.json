@@ -16,10 +16,12 @@
     "esri-loader": "^3.4.0",
     "vue": "^2.5.2",
     "vue-awesome": "^4.5.0",
+    "vue-easytable": "^2.13.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "axios": "^0.21.0",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
