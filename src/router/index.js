@@ -18,9 +18,9 @@ export default new Router({
           component: () => import('../components/Map/Map')
         },
         {
-          path: '/basemap',
-          name: 'basemap',
-          component: () => import('../components/Map/BaseMap')
+          path: '/routemap',
+          name: 'routemap',
+          component: () => import('../components/Map/RouteMap')
         },
         {
           path: '/drawmap',
@@ -46,36 +46,53 @@ export default new Router({
           component: () => import('../components/Tables/SitesTable')
         },
         {
-          path:'/restaurantTable',
-          name:'restaurantTable',
+          path: '/restaurantTable',
+          name: 'restaurantTable',
           component: () => import('../components/Tables/RestaurantTable')
         },
         {
-          path:'/accommodationTable',
-          name:'restaurantTable',
+          path: '/accommodationTable',
+          name: 'accommodationTable',
           component: () => import('../components/Tables/AccommodationTable')
         },
         {
-          path:'/educationTable',
-          name:'restaurantTable',
+          path: '/educationTable',
+          name: 'educationTable',
           component: () => import('../components/Tables/EducationTable')
         },
         {
-          path:'/entertainTable',
-          name:'restaurantTable',
+          path: '/entertainTable',
+          name: 'entertainTable',
           component: () => import('../components/Tables/EntertainTable')
         },
         {
-          path:'/financeTable',
-          name:'restaurantTable',
+          path: '/financeTable',
+          name: 'financeTable',
           component: () => import('../components/Tables/FinanceTable')
         },
         {
-          path:'/marketTable',
-          name:'restaurantTable',
+          path: '/marketTable',
+          name: 'marketTable',
           component: () => import('../components/Tables/MarketTable')
         }
       ]
     },
+    {
+      path: '/diagram',
+      name: 'DiagramLayout',
+      component: () => import('../views/Layout/Layout'),
+      children: [
+        {
+          path: '/diagramAll',
+          name: 'diagramAll',
+          component: () => import('../views/Diagram')
+        },
+        {
+          path:'/wordCloud',
+          name:'wordCloud',
+          component: () => import('../views/WordCloud')
+        }
+      ]
+    }
   ]
 })

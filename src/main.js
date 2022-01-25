@@ -15,13 +15,15 @@ import VueEasytable from "vue-easytable";
 Vue.use(VueEasytable);
 
 import axios from 'axios'
-import Axios from 'axios';
-
+import Axios from 'axios'
+import * as echarts from 'echarts'
 Vue.prototype.$ajax = axios
 // 设置全局的axios
 Vue.prototype.$axios=Axios
 // 设置基本路径
 Axios.defaults.baseURL='/api'
+
+Vue.prototype.$echarts = echarts;
 
 Vue.use(ElementUI)
 
