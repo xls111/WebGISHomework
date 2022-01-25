@@ -20,8 +20,8 @@ export default {
 
       let options = {
         url: 'https://js.arcgis.com/4.22/',
-        // css: 'https://js.arcgis.com/4.22/esri/themes/light/main.css'
-        css:"http://LJLHAPPY/arcgis_js_api/library/3.9/3.9/js/esri/css/esri.css"
+        css: 'https://js.arcgis.com/4.22/esri/themes/light/main.css'
+        // css:"http://LJLHAPPY/arcgis_js_api/library/3.9/3.9/js/esri/css/esri.css"
       };
 
       loadModules([
@@ -83,11 +83,11 @@ export default {
         };
 
         const subwayline = new MapImageLayer({
-          url:"https://localhost:6443/arcgis/rest/services/subwayline/MapServer"
+          url:"https://localhost:6443/arcgis/rest/services/subwayandstation/MapServer"
         });
 
         const identifyURL =
-          "https://localhost:6443/arcgis/rest/services/subwayline/MapServer";
+          "https://localhost:6443/arcgis/rest/services/subwayandstation/MapServer";
         const map = new Map({
           basemap: "streets-navigation-vector",
           // layers: [routeLayer] // Add the route layer to the map
@@ -151,13 +151,20 @@ export default {
                 const layerName = result.layerName;
 
                 feature.attributes.layerName = layerName;
-                if (layerName === "subwayPoint") {
+                if (layerName === "subwayStation") {
                   feature.popupTemplate = {
                     // autocasts as new PopupTemplate()
                     title: layerName,
                     content:
                       "<b>Name:</b> {name} " +
                       "<br><b>Address:</b> {address}"
+                  };
+                }else if (layerName === "subway") {
+                  feature.popupTemplate = {
+                    // autocasts as new PopupTemplate()
+                    title: layerName,
+                    content:
+                      "<b>Name:</b> {Name} "
                   };
                 }
                 return feature;
@@ -259,7 +266,7 @@ export default {
 #viewDiv {
   padding:0;
   margin: 0 0 0 0;
-  height: 100%;
+  height: 750px;
   width: 100%;
 }
 
