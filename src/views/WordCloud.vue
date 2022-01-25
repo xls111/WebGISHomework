@@ -175,6 +175,15 @@ export default {
           text: "地标类型热点",
           x: "center"
         },
+        toolbox: {
+          show: true,
+          feature: {
+            mark: { show: true },
+            dataView: { show: true, readOnly: false },
+            restore: { show: true },
+            saveAsImage: { show: true }
+          }
+        },
         backgroundColor: "#fff",
         // tooltip: {
         //   pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>"
@@ -231,6 +240,15 @@ export default {
         title: {
           text: "地标热点",
           x: "center"
+        },
+        toolbox: {
+          show: true,
+          feature: {
+            mark: { show: true },
+            dataView: { show: true, readOnly: false },
+            restore: { show: true },
+            saveAsImage: { show: true }
+          }
         },
         backgroundColor: "#fff",
         // tooltip: {

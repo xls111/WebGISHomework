@@ -31,6 +31,16 @@ export default new Router({
           path: '/webmap',
           name: 'webmap',
           component: () => import('../components/Map/WebMap')
+        },
+        {
+          path:'/baiduMap',
+          name:'baiduMap',
+          component: () => import('../components/Map/BaiduMap')
+        },
+        {
+          path:'/searchMap',
+          name:'searchMap',
+          component: () => import('../components/Map/SearchMap')
         }
       ]
     },
@@ -91,6 +101,11 @@ export default new Router({
           path:'/wordCloud',
           name:'wordCloud',
           component: () => import('../views/WordCloud')
+        },
+        {
+          path:'/diagramSurround',
+          name:'diagramSurround',
+          component: () => import('../views/SurroundDiagram')
         }
       ]
     }

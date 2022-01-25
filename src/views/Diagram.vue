@@ -112,6 +112,15 @@ export default {
           top: 0,
           bottom: 0
         },
+        toolbox: {
+          show: true,
+          feature: {
+            mark: { show: true },
+            dataView: { show: true, readOnly: false },
+            restore: { show: true },
+            saveAsImage: { show: true }
+          }
+        },
         xAxis: {
           data: ['荔湾区', '越秀区', '海珠区', '天河区', '白云区', '黄浦区','番禺区','花都区','南沙区','从化区','增城区']
         },
@@ -169,6 +178,15 @@ export default {
           left:"0px",
           right:"0px",
           borderWidth:1
+        },
+        toolbox: {
+          show: true,
+          feature: {
+            mark: { show: true },
+            dataView: { show: true, readOnly: false },
+            restore: { show: true },
+            saveAsImage: { show: true }
+          }
         },
         series: [
           {

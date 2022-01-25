@@ -30,7 +30,10 @@ export default {
 /*}*/
 .app-main{
   position:relative;
-  left:0px;
-  height:700px;
+  left:0;
+  right:5px;
+  padding: 1px 5px 1px 1px;
+  bottom:0;
+  min-height:calc(100% - 60px);
 }
 </style>

@@ -16,6 +16,7 @@
     "esri-loader": "^3.4.0",
     "vue": "^2.5.2",
     "vue-awesome": "^4.5.0",
+    "vue-baidu-map": "^0.21.22",
     "vue-easytable": "^2.13.0",
     "vue-router": "^3.0.1"
   },

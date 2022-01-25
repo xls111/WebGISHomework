@@ -17,6 +17,11 @@ Vue.use(VueEasytable);
 import axios from 'axios'
 import Axios from 'axios'
 import * as echarts from 'echarts'
+import BaiduMap from 'vue-baidu-map'
+
+Vue.use(BaiduMap, {
+  ak: 'Omuy1iCwFKEE0v6mrVnTixeggxixF6pe'
+})
 Vue.prototype.$ajax = axios
 // 设置全局的axios
 Vue.prototype.$axios=Axios

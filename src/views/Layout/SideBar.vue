@@ -27,22 +27,10 @@
           <i class="el-icon-location"></i>
           <span slot="title">地标查询</span>
         </template>
-        <router-link to="basemap" key="basemap">
-          <el-menu-item index="/basemap">
+        <router-link to="searchMap" key="searchMap">
+          <el-menu-item index="searchMap">
             <i class="el-icon-location"></i>
-            <span slot="title">功能一</span>
-          </el-menu-item>
-        </router-link>
-        <router-link to="drawmap" key="drawmap">
-          <el-menu-item index="/drawmap">
-            <i class="el-icon-location"></i>
-            <span slot="title">功能二</span>
-          </el-menu-item>
-        </router-link>
-        <router-link to="map" key="map">
-          <el-menu-item index="/map">
-            <i class="el-icon-location"></i>
-            <span slot="title">功能三</span>
+            <span slot="title">查询景点</span>
           </el-menu-item>
         </router-link>
       </el-submenu>
@@ -52,22 +40,22 @@
           <i class="el-icon-s-promotion"></i>
           <span slot="title">路线规划</span>
         </template>
-        <router-link to="routemap" key="routemap">
+        <router-link to="routemap" key="routeMap">
           <el-menu-item index="routemap">
             <i class="el-icon-s-promotion"></i>
-            <span slot="title">地铁路径查询</span>
+            <span slot="title">地铁路径规划</span>
           </el-menu-item>
         </router-link>
-        <router-link to="drawmap" key="drawmap">
+        <router-link to="searchMap" key="searchMap">
           <el-menu-item index="/drawmap">
             <i class="el-icon-s-promotion"></i>
-            <span slot="title">功能二</span>
+            <span slot="title">路径查询</span>
           </el-menu-item>
         </router-link>
-        <router-link to="map" key="map">
+        <router-link to="baiduMap" key="baiduMap">
           <el-menu-item index="/map">
             <i class="el-icon-s-promotion"></i>
-            <span slot="title">功能三</span>
+            <span slot="title">地标路径</span>
           </el-menu-item>
         </router-link>
       </el-submenu>
@@ -163,10 +151,10 @@
             <span slot="title">词云</span>
           </el-menu-item>
         </router-link>
-        <router-link to="map" key="map">
-          <el-menu-item index="/map">
+        <router-link to="diagramSurround" key="diagramSurround">
+          <el-menu-item index="diagramSurround">
             <i class="el-icon-tickets"></i>
-            <span slot="title">功能三</span>
+            <span slot="title">周边POI图表</span>
           </el-menu-item>
         </router-link>
       </el-submenu>
@@ -176,24 +164,18 @@
           <i class="el-icon-link"></i>
           <span slot="title">外链</span>
         </template>
-        <router-link to="basemap" key="basemap">
-          <el-menu-item index="/basemap">
-            <i class="el-icon-link"></i>
-            <span slot="title" @click="hrefClick">一</span>
-          </el-menu-item>
-        </router-link>
-        <router-link to="drawmap" key="drawmap">
-          <el-menu-item index="/drawmap">
-            <i class="el-icon-link"></i>
-            <span slot="title">二</span>
-          </el-menu-item>
-        </router-link>
-        <router-link to="map" key="map">
-          <el-menu-item index="/map">
-            <i class="el-icon-link"></i>
-            <span slot="title">三</span>
-          </el-menu-item>
-        </router-link>
+        <el-menu-item index="" :key="url">
+          <i class="el-icon-link"></i>
+          <a :href="url" target="_blank">一</a>
+        </el-menu-item>
+        <el-menu-item >
+          <i class="el-icon-link"></i>
+          <span slot="title">二</span>
+        </el-menu-item>
+        <el-menu-item >
+          <i class="el-icon-link"></i>
+          <span slot="title">三</span>
+        </el-menu-item>
 
       </el-submenu>
     </el-menu>
@@ -245,7 +227,7 @@ a {
 /*}*/
 .el-menu-vertical:not(.el-menu--collapse) {
   width: 210px;
-  min-height: 760px;
+  min-height: 800px;
   text-decoration: none;
 }
 

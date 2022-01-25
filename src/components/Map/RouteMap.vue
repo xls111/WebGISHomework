@@ -1,5 +1,5 @@
 <template>
-  <div id="viewDiv" style="width:100%;height:600px"></div>
+  <div id="viewDiv" style="width:100%;height:750px"></div>
 </template>
 
 <script>

@@ -4,9 +4,9 @@
       <el-header class="header">
         <vheader></vheader>
       </el-header>
-      <el-container id="main-wrapper">
+      <el-container id="main-wrapper" style="height: 100%">
         <side></side>
-        <el-main>
+        <el-main style="height: 100%">
           <!--        <router-view></router-view>-->
           <appmain></appmain>
         </el-main>
@@ -31,16 +31,23 @@ export default {
 </script>
 
 <style scoped>
+.el-container{
+  height: 100%;
+}
+
 .el-header {
   padding: 0px;
   min-height: 50px;
 }
+.el-aside {
+  width: 210px;
+}
 .el-main{
-  height:760px;
-  padding:0px;
-}
-#main-wrapper{
+  height:calc(100% - 60px);
   padding:0;
-  height:800px;
 }
+/*#main-wrapper{*/
+/*  padding:0;*/
+/*  height:800px;*/
+/*}*/
 </style>

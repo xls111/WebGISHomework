@@ -11,8 +11,12 @@ export default {
 </script>
 
 <style>
-html,body{
+html,
+body,
+#app {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 /*#app {*/
 /*  font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
