@@ -1,9 +1,7 @@
 <template>
   <div id="echart" width="100%">
-    <div>
       <div id="echart1" style="height: 350px; width: 100%;"></div>
       <div id="echart2" style="height: 400px; width: 100%;"></div>
-    </div>
   </div>
 </template>
 
