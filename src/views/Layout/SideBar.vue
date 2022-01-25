@@ -164,19 +164,38 @@
           <i class="el-icon-link"></i>
           <span slot="title">外链</span>
         </template>
-        <el-menu-item index="" :key="url">
+        <el-menu-item index="" :key="urls[0]">
           <i class="el-icon-link"></i>
-          <a :href="url" target="_blank">一</a>
+          <a :href="urls[0]" target="_blank">永庆坊</a>
         </el-menu-item>
-        <el-menu-item >
+        <el-menu-item index="" :key="urls[1]">
           <i class="el-icon-link"></i>
-          <span slot="title">二</span>
+          <a :href="urls[1]" target="_blank">陈氏宗祠</a>
         </el-menu-item>
-        <el-menu-item >
+        <el-menu-item index="" :key="urls[2]">
           <i class="el-icon-link"></i>
-          <span slot="title">三</span>
+          <a :href="urls[2]" target="_blank">粤剧艺术博物馆</a>
         </el-menu-item>
-
+        <el-menu-item index="" :key="urls[3]">
+          <i class="el-icon-link"></i>
+          <a :href="urls[3]" target="_blank">中山纪念堂</a>
+        </el-menu-item>
+        <el-menu-item index="" :key="urls[4]">
+          <i class="el-icon-link"></i>
+          <a :href="urls[4]" target="_blank">镇海楼</a>
+        </el-menu-item>
+        <el-menu-item index="" :key="urls[5]">
+          <i class="el-icon-link"></i>
+          <a :href="urls[5]" target="_blank">西汉南越王博物馆</a>
+        </el-menu-item>
+        <el-menu-item index="" :key="urls[6]">
+          <i class="el-icon-link"></i>
+          <a :href="urls[6]" target="_blank">广州塔</a>
+        </el-menu-item>
+        <el-menu-item index="" :key="urls[7]">
+          <i class="el-icon-link"></i>
+          <a :href="urls[7]" target="_blank">天河体育中心</a>
+        </el-menu-item>
       </el-submenu>
     </el-menu>
   </div>
@@ -188,7 +207,18 @@ export default {
   data() {
     return {
       isCollapse: false,
-      url: "https://cn.bing.com/"
+      urls: [
+        "https://baike.baidu.com/item/%E6%B0%B8%E5%BA%86%E5%9D%8A/20604110?fr=aladdin",
+        "https://baike.baidu.com/item/%E9%99%88%E5%AE%B6%E7%A5%A0%E5%A0%82/4242579?fromtitle=%E9%99%88%E5%AE%B6%E7%A5%A0&fromid=1364077&fr=aladdin",
+        "https://baike.baidu.com/item/%E7%B2%A4%E5%89%A7%E8%89%BA%E6%9C%AF%E5%8D%9A%E7%89%A9%E9%A6%86/4822702?fr=aladdin",
+        "https://baike.baidu.com/item/%E4%B8%AD%E5%B1%B1%E7%BA%AA%E5%BF%B5%E5%A0%82/4323?fr=aladdin",
+        "https://baike.baidu.com/item/%E9%95%87%E6%B5%B7%E6%A5%BC/2205",
+        "https://baike.baidu.com/item/%E8%A5%BF%E6%B1%89%E5%8D%97%E8%B6%8A%E7%8E%8B%E5%8D%9A%E7%89%A9%E9%A6%86/1786642?fromtitle=%E5%8D%97%E8%B6%8A%E7%8E%8B%E5%8D%9A%E7%89%A9%E9%A6%86&fromid=14724371&fr=aladdin",
+        "https://baike.baidu.com/item/%E5%B9%BF%E5%B7%9E%E5%A1%94/1951402?fr=aladdin",
+        "https://baike.baidu.com/item/%E5%A4%A9%E6%B2%B3%E4%BD%93%E8%82%B2%E4%B8%AD%E5%BF%83/10230243?fr=aladdin"
+      ],
+
+
     };
   },
   methods: {
@@ -214,8 +244,20 @@ a {
   text-decoration: none;
 }
 
-.router-link-active {
-  text-decoration: none;
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: lightgray;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+a:active {
+  color: #ccc;
 }
 
 /*.sidebar {*/
@@ -229,6 +271,7 @@ a {
   width: 210px;
   min-height: 800px;
   text-decoration: none;
+  overflow-y: hidden;
 }
 
 /*.el-menu-vertical {*/
